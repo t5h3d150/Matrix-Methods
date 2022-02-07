@@ -28,7 +28,7 @@
 \begin{document}
 	% Cover page
 	\thispagestyle{empty} 
-	\centering \hspace{-1mm} \vfill {\Huge\bf Theory of Algorithms} 
+	\centering \hspace{-1mm} \vfill {\Huge\bf Matrix Methods} 
 	\vfill
 	% End of cover page
 	\newpage
@@ -42,18 +42,18 @@
 	\setcounter{page}{1}
 	% Start of Page 1
 	\begin{flushleft}
-		\subsubsection{Divide and Conquer}
-		This approach recursively breaks down a problem into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem. The steps in applying this technique:
+		\section{Linear Algebra}
+		\subsection{Linear Independence}
 		\begin{itemize}
-			\item[1.] Divide: split the input apart into multiple smaller pieces, recursively solving each piece
-			\item[2.] Conquer: combine the solutions to each smaller piece together into the overall solution
+			\item consider $\boldsymbol{X}$: $m\times n$ (a vector of vectors) and $\boldsymbol{a}$: $n\times 1$ (a vector of constants)
+			\item $\boldsymbol{X}=[\boldsymbol{x}_{1}~\boldsymbol{x}_{2}~...~\boldsymbol{x}_{n}]$
+			\item $\boldsymbol{Xa}=\sum\limits^{n}_{i=1}a_{i}\boldsymbol{x}_{i}=\boldsymbol{0}$
+			\item $\boldsymbol{a}=\boldsymbol{0}$ is the trivial solution
+			\item if $\boldsymbol{a}=\boldsymbol{0}$ is the only solution, then the vectors $\boldsymbol{x}_{i}$ are \textbf{linearly independent}
+			\item if at least one $a_{i}\not=0$, then the vectors $\boldsymbol{x}_{i}$ are \textbf{linearly dependent}
+			\item rearranging $\sum\limits^{n}_{i=1}a_{i}\boldsymbol{x}_{i}=0$:
+			\begin{equation*}\begin{split}
+				\boldsymbol{x}_{i}=\frac{a_{i}}{a_{i}}\boldsymbol{x}_{i}+...+a_{i}\boldsymbol{x}_{i}
+			\end{split}\end{equation*}
 		\end{itemize}
-		Problems to solve:
-		\begin{itemize}
-			\item merge sort
-			\item quicksort
-			\item sum of numbers in array
-			\item closest pair (split and solve, straddle zone, quick hull)
-		\end{itemize}
-	\end{flushleft}
 \end{document}
